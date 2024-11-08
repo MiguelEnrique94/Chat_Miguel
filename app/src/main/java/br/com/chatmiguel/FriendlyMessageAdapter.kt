@@ -1,5 +1,6 @@
 package br.com.chatmiguel
 
+import android.content.ContentValues.TAG
 import android.graphics.Color
 import android.util.Log
 import android.view.LayoutInflater
@@ -26,6 +27,7 @@ class FriendlyMessageAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val inflater = LayoutInflater.from(parent.context)
+        var VIEW_TYPE_TEXT = null
         return if (viewType == VIEW_TYPE_TEXT) {
             val view = inflater.inflate(R.layout.message, parent, false)
             val binding = MessageBinding.bind(view)
@@ -46,6 +48,8 @@ class FriendlyMessageAdapter(
     }
 
     override fun getItemViewType(position: Int): Int {
+        var VIEW_TYPE_TEXT = 0
+        var VIEW_TYPE_IMAGE = 0
         return if (options.snapshots[position].text != null) VIEW_TYPE_TEXT else VIEW_TYPE_IMAGE
     }
 
@@ -54,6 +58,7 @@ class FriendlyMessageAdapter(
             binding.messageTextView.text = item.text
             setTextColor(item.name, binding.messageTextView)
 
+            var ANONYMOUS = null
             binding.messengerTextView.text = item.name ?: ANONYMOUS
             if (item.photoUrl != null) {
                 loadImageIntoView(binding.messengerImageView, item.photoUrl)
@@ -63,6 +68,7 @@ class FriendlyMessageAdapter(
         }
 
         private fun setTextColor(userName: String?, textView: TextView) {
+            var ANONYMOUS = null
             if (userName != ANONYMOUS && currentUserName == userName && userName != null) {
                 textView.setBackgroundResource(R.drawable.rounded_message_blue)
                 textView.setTextColor(Color.WHITE)
@@ -78,6 +84,7 @@ class FriendlyMessageAdapter(
         fun bind(item: FriendlyMessage) {
             loadImageIntoView(binding.messageImageView, item.imageUrl!!, false)
 
+            var ANONYMOUS = null
             binding.messengerTextView.text = item.name ?: ANONYMOUS
             if (item.photoUrl != null) {
                 loadImageIntoView(binding.messengerImageView, item.photoUrl)
@@ -119,9 +126,9 @@ class FriendlyMessageAdapter(
         requestBuilder.into(view)
     }
 
-    companion object {
+    object
         const val TAG = "MessageAdapter"
         const val VIEW_TYPE_TEXT = 1
         const val VIEW_TYPE_IMAGE = 2
-    }
-}
+
+
