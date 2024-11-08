@@ -1,0 +1,5 @@
+com.example.chatthiago.test.app-core-1.6.1-0 C:\Users\sl307\.gradle\caches\transforms-4\5897bb27cf0ce369b13132fea459adda\transformed\core-1.6.1\res
+com.example.chatthiago.test.app-androidTest-1 C:\Users\sl307\Documents\thiagoProjetos\ChatThiago\app\build\generated\res\resValues\androidTest\debug
+com.example.chatthiago.test.app-mergeDebugAndroidTestResources-2 C:\Users\sl307\Documents\thiagoProjetos\ChatThiago\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.chatthiago.test.app-mergeDebugAndroidTestResources-3 C:\Users\sl307\Documents\thiagoProjetos\ChatThiago\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.chatthiago.test.app-debugAndroidTest-4 C:\Users\sl307\Documents\thiagoProjetos\ChatThiago\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

@@ -1,0 +1,3 @@
+com.example.chatthiago.test
+style WhiteBackgroundDialogTheme
+style WhiteBackgroundTheme
