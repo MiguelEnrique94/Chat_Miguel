@@ -87,6 +87,9 @@ class FriendlyMessageAdapter(
         }
     }
 
+
+    }
+
     private fun loadImageIntoView(view: ImageView, url: String, isCircular: Boolean = true) {
         if (url.startsWith("gs://")) {
             val storageReference = Firebase.storage.getReferenceFromUrl(url)
